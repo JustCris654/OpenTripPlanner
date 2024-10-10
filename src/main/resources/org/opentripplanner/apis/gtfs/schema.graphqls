@@ -106,7 +106,7 @@ type Agency implements Node {
   "ID of the time zone which this agency operates on"
   timezone: String!
   "URL to the home page of the agency"
-  url: String!
+  url: String
 }
 
 "Alert of a current or upcoming disruption in public transportation"
