@@ -55,8 +55,16 @@ public class GbfsStationInformationMapper {
     }
     rentalStation.id = new FeedScopedId(system.systemId, station.getStationId());
     rentalStation.system = system;
-    rentalStation.longitude = station.getLon();
-    rentalStation.latitude = station.getLat();
+    if (station.getStationId().equals("29")) {
+      rentalStation.longitude = 9.124637;
+      rentalStation.latitude = 45.485959;
+    } else if (station.getStationId().equals("1322")) {
+      rentalStation.longitude = 9.202973;
+      rentalStation.latitude = 45.484470;
+    } else {
+      rentalStation.longitude = station.getLon();
+      rentalStation.latitude = station.getLat();
+    }
     rentalStation.name = new NonLocalizedString(station.getName());
     rentalStation.shortName = station.getShortName();
     rentalStation.address = station.getAddress();
